@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: bold; text-anchor: middle; }
+      .subtitle { font-size: 12px; font-weight: bold; }
+      .label { font-size: 10px; }
+      .box-border { stroke: #333; stroke-width: 1.5; fill: white; }
+      .box-light-blue { stroke: #333; stroke-width: 1.5; fill: #E3F2FD; }
+      .box-light-yellow { stroke: #333; stroke-width: 1.5; fill: #FFFACD; }
+      .box-light-green { stroke: #333; stroke-width: 1.5; fill: #E8F5E9; }
+      .box-light-orange { stroke: #333; stroke-width: 1.5; fill: #FFE0B2; }
+      .connection-line { stroke: #333; stroke-width: 1.5; fill: none; }
+      .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
+      .arrow-line { stroke: #333; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="30" class="title">Deep Sea Habitat - System Architecture Block Diagram</text>
+
+  <!-- CENTRAL HUB & CONTROL (Top Center) -->
+  <g id="central-hub">
+    <rect x="400" y="50" width="400" height="120" class="box-light-blue"/>
+    <text x="600" y="70" class="subtitle" text-anchor="middle">CENTRAL HUB & CONTROL</text>
+    
+    <rect x="420" y="85" width="160" height="75" class="box-border"/>
+    <text x="500" y="105" class="label" text-anchor="middle">Central Hub</text>
+    <text x="500" y="120" class="label" text-anchor="middle">(Operation Control</text>
+    <text x="500" y="135" class="label" text-anchor="middle">System Monitoring</text>
+    <text x="500" y="150" class="label" text-anchor="middle">Data Management)</text>
+    
+    <rect x="600" y="85" width="180" height="75" class="box-border"/>
+    <text x="690" y="105" class="label" text-anchor="middle">Power Management</text>
+    <text x="690" y="125" class="label" text-anchor="middle">Mode Selection</text>
+    <text x="690" y="145" class="label" text-anchor="middle">System Control Logic</text>
+    
+    <!-- Annotation -->
+    <line x1="800" y1="90" x2="900" y2="60" class="dashed-line"/>
+    <rect x="900" y="50" width="180" height="50" class="box-border"/>
+    <text x="990" y="65" class="label" text-anchor="middle">Central command and control</text>
+    <text x="990" y="80" class="label" text-anchor="middle">for all habitat systems</text>
+  </g>
+
+  <!-- OPERATIONAL MODES (Left) -->
+  <g id="operational-modes">
+    <rect x="50" y="200" width="200" height="100" class="box-light-yellow"/>
+    <text x="150" y="220" class="subtitle" text-anchor="middle">OPERATIONAL MODES</text>
+    
+    <rect x="70" y="240" width="160" height="50" class="box-border"/>
+    <text x="150" y="255" class="label" text-anchor="middle">Mode Controller</text>
+    <text x="150" y="270" class="label" text-anchor="middle">(Normal | Quiet | Emergency)</text>
+    <text x="150" y="285" class="label" text-anchor="middle">Mode Signals</text>
+  </g>
+
+  <!-- LIFE SUPPORT SYSTEMS (Left-Bottom) -->
+  <g id="life-support">
+    <rect x="20" y="350" width="280" height="200" class="box-light-green"/>
+    <text x="160" y="370" class="subtitle" text-anchor="middle">LIFE SUPPORT SYSTEMS</text>
+    
+    <!-- Gas Management -->
+    <rect x="40" y="390" width="120" height="80" class="box-border"/>
+    <text x="100" y="405" class="label" text-anchor="middle">Gas Management</text>
+    <text x="100" y="420" class="label" text-anchor="middle">(Fresh Gas Supply</text>
+    <text x="100" y="435" class="label" text-anchor="middle">Waste Gas Dumps</text>
+    <text x="100" y="450" class="label" text-anchor="middle">Emergency N2/O2</text>
+    <text x="100" y="465" class="label" text-anchor="middle">Diver Breathing Gas)</text>
+    
+    <!-- Water Management -->
+    <rect x="170" y="390" width="120" height="80" class="box-border"/>
+    <text x="230" y="405" class="label" text-anchor="middle">Water Management</text>
+    <text x="230" y="420" class="label" text-anchor="middle">(Gray Water Processing</text>
+    <text x="230" y="435" class="label" text-anchor="middle">Black Water Processing</text>
+    <text x="230" y="450" class="label" text-anchor="middle">Water Treatment)</text>
+    
+    <!-- Fresh Gas Supply -->
+    <rect x="40" y="485" width="120" height="50" class="box-border"/>
+    <text x="100" y="500" class="label" text-anchor="middle">Fresh Gas Supply</text>
+    <text x="100" y="520" class="label" text-anchor="middle">Treated Water</text>
+  </g>
+
+  <!-- HABITAT MODULE (Left-Center) -->
+  <g id="habitat-module">
+    <rect x="50" y="580" width="200" height="120" class="box-light-blue"/>
+    <text x="150" y="600" class="subtitle" text-anchor="middle">HABITAT MODULE</text>
+    
+    <rect x="70" y="620" width="160" height="70" class="box-border"/>
+    <text x="150" y="635" class="label" text-anchor="middle">Habitat Module</text>
+    <text x="150" y="650" class="label" text-anchor="middle">(Environmental Control</text>
+    <text x="150" y="665" class="label" text-anchor="middle">Crew Quarters</text>
+    <text x="150" y="680" class="label" text-anchor="middle">Workspace)</text>
+  </g>
+
+  <!-- POWER SYSTEMS (Center) -->
+  <g id="power-systems">
+    <rect x="350" y="200" width="280" height="300" class="box-light-blue"/>
+    <text x="490" y="220" class="subtitle" text-anchor="middle">POWER SYSTEMS</text>
+    
+    <!-- Power Source -->
+    <rect x="370" y="240" width="120" height="70" class="box-border"/>
+    <text x="430" y="255" class="label" text-anchor="middle">Power Source</text>
+    <text x="430" y="270" class="label" text-anchor="middle">(4 Battery Banks</text>
+    <text x="430" y="285" class="label" text-anchor="middle">With Redundancy)</text>
+    
+    <!-- Power Supply -->
+    <rect x="510" y="240" width="100" height="70" class="box-border"/>
+    <text x="560" y="255" class="label" text-anchor="middle">Power Supply</text>
+    <text x="560" y="270" class="label" text-anchor="middle">Communication Hub</text>
+    
+    <!-- Power Distribution -->
+    <rect x="370" y="330" width="240" height="80" class="box-border"/>
+    <text x="490" y="345" class="label" text-anchor="middle">Power Distribution</text>
+    <text x="490" y="360" class="label" text-anchor="middle">(Emergency Backup</text>
+    <text x="490" y="375" class="label" text-anchor="middle">Power Conditioning</text>
+    <text x="490" y="390" class="label" text-anchor="middle">Load Management)</text>
+    
+    <!-- Power annotations -->
+    <text x="370" y="430" class="label">Power</text>
+    <text x="370" y="450" class="label">Control & Monitoring</text>
+    <text x="370" y="470" class="label">Power</text>
+  </g>
+
+  <!-- COMMUNICATION & DATA (Center-Right) -->
+  <g id="coada">
+    <rect x="500" y="420" width="280" height="100" class="box-light-blue"/>
+    <text x="640" y="440" class="subtitle" text-anchor="middle">COMMUNICATION & DATA (COADA)</text>
+    
+    <rect x="520" y="460" width="240" height="50" class="box-border"/>
+    <text x="640" y="475" class="label" text-anchor="middle">COADA System</text>
+    <text x="640" y="490" class="label" text-anchor="middle">(Direct | Surface | Through-Water</text>
+    <text x="640" y="505" class="label" text-anchor="middle">Network Over IP | Wireless | Diver Comms)</text>
+  </g>
+
+  <!-- MEDICAL SYSTEMS (Right) -->
+  <g id="medical">
+    <rect x="800" y="200" width="220" height="150" class="box-light-blue"/>
+    <text x="910" y="220" class="subtitle" text-anchor="middle">MEDICAL SYSTEMS</text>
+    
+    <rect x="820" y="240" width="180" height="90" class="box-border"/>
+    <text x="910" y="255" class="label" text-anchor="middle">Medical Facilities</text>
+    <text x="910" y="270" class="label" text-anchor="middle">(Medical Equipment</text>
+    <text x="910" y="285" class="label" text-anchor="middle">O2/N2/BAPS Monitoring</text>
+    <text x="910" y="300" class="label" text-anchor="middle">Emergency Medical)</text>
+    
+    <!-- Annotation -->
+    <line x1="1000" y1="250" x2="1050" y2="220" class="dashed-line"/>
+    <rect x="1050" y="200" width="130" height="60" class="box-border"/>
+    <text x="1115" y="215" class="label" text-anchor="middle">Medical Monitoring</text>
+    <text x="1115" y="230" class="label" text-anchor="middle">Multi-battery architecture</text>
+    <text x="1115" y="245" class="label" text-anchor="middle">with emergency reserves</text>
+  </g>
+
+  <!-- EXTERNAL WORK PACKAGE (Bottom-Right) -->
+  <g id="xwp">
+    <rect x="500" y="550" width="320" height="180" class="box-light-orange"/>
+    <text x="660" y="570" class="subtitle" text-anchor="middle">EXTERNAL WORK PACKAGE (XWP)</text>
+    
+    <!-- Submersible Transfer Vehicle -->
+    <rect x="520" y="590" width="140" height="60" class="box-border"/>
+    <text x="590" y="605" class="label" text-anchor="middle">Submersible Transfer</text>
+    <text x="590" y="620" class="label" text-anchor="middle">Vehicle (STV)</text>
+    <text x="590" y="635" class="label" text-anchor="middle">(Personnel & Equipment</text>
+    <text x="590" y="650" class="label" text-anchor="middle">Transfer)</text>
+    
+    <!-- Ambient Module/Bell -->
+    <rect x="680" y="590" width="130" height="60" class="box-border"/>
+    <text x="745" y="605" class="label" text-anchor="middle">Ambient Module/Bell</text>
+    <text x="745" y="620" class="label" text-anchor="middle">(AMB)</text>
+    <text x="745" y="635" class="label" text-anchor="middle">(Diver Decompression</text>
+    <text x="745" y="650" class="label" text-anchor="middle">Pressure Management)</text>
+    
+    <!-- Submersible Intervention Units -->
+    <rect x="520" y="665" width="290" height="60" class="box-border"/>
+    <text x="665" y="680" class="label" text-anchor="middle">Submersible Intervention</text>
+    <text x="665" y="695" class="label" text-anchor="middle">Units (SIU 1, SIU 2)</text>
+    <text x="665" y="710" class="label" text-anchor="middle">(Robotic & Manned</text>
+    <text x="665" y="725" class="label" text-anchor="middle">Intervention)</text>
+    
+    <!-- Support Link -->
+    <text x="520" y="750" class="label">Support Link</text>
+    
+    <!-- Annotation -->
+    <line x1="800" y1="600" x2="900" y2="570" class="dashed-line"/>
+    <rect x="900" y="550" width="150" height="70" class="box-border"/>
+    <text x="975" y="565" class="label" text-anchor="middle">External operations support</text>
+    <text x="975" y="580" class="label" text-anchor="middle">for deep-sea missions</text>
+    <text x="975" y="595" class="label" text-anchor="middle">XWP Control</text>
+    <text x="975" y="610" class="label" text-anchor="middle">XWP Control</text>
+  </g>
+
+  <!-- CONNECTION LINES -->
+  <g id="connections">
+    <!-- Central Hub to Life Support -->
+    <line x1="400" y1="160" x2="160" y2="350" class="connection-line"/>
+    <text x="250" y="240" class="label">Mode Signals</text>
+    
+    <!-- Central Hub to Power -->
+    <line x1="490" y1="170" x2="490" y2="200" class="connection-line"/>
+    <text x="510" y="185" class="label">Control</text>
+    
+    <!-- Central Hub to COADA -->
+    <line x1="600" y1="170" x2="640" y2="420" class="connection-line"/>
+    <text x="620" y="290" class="label">Control</text>
+    
+    <!-- Central Hub to Medical -->
+    <line x1="800" y1="160" x2="910" y2="200" class="connection-line"/>
+    <text x="850" y="175" class="label">Medical Monitoring</text>
+    
+    <!-- Power to Life Support -->
+    <line x1="370" y1="390" x2="280" y2="420" class="connection-line"/>
+    <text x="310" y="405" class="label">Power</text>
+    
+    <!-- Power to Habitat -->
+    <line x1="350" y1="500" x2="250" y2="580" class="connection-line"/>
+    <text x="290" y="540" class="label">Power</text>
+    
+    <!-- Power to COADA -->
+    <line x1="520" y1="420" x2="560" y2="420" class="connection-line"/>
+    <text x="540" y="415" class="label">Power</text>
+    
+    <!-- Power to Medical -->
+    <line x1="630" y1="330" x2="820" y2="280" class="connection-line"/>
+    <text x="710" y="300" class="label">Power</text>
+    
+    <!-- Power to XWP -->
+    <line x1="630" y1="330" x2="660" y2="550" class="connection-line"/>
+    <text x="640" y="440" class="label">Power</text>
+    
+    <!-- COADA to XWP -->
+    <line x1="640" y1="520" x2="660" y2="550" class="connection-line"/>
+    <text x="650" y="535" class="label">Communication</text>
+    
+    <!-- Habitat to Life Support -->
+    <line x1="150" y1="580" x2="160" y2="550" class="connection-line"/>
+    <text x="170" y="565" class="label">Wastewater</text>
+    <text x="170" y="580" class="label">Treated Water</text>
+  </g>
+
+  <!-- LEGEND -->
+  <g id="legend">
+    <text x="50" y="850" class="subtitle">Legend:</text>
+    <rect x="50" y="860" width="15" height="15" class="box-light-blue"/>
+    <text x="75" y="872" class="label">Primary Systems</text>
+    
+    <rect x="250" y="860" width="15" height="15" class="box-light-yellow"/>
+    <text x="275" y="872" class="label">Operational Modes</text>
+    
+    <rect x="500" y="860" width="15" height="15" class="box-light-green"/>
+    <text x="525" y="872" class="label">Life Support</text>
+    
+    <rect x="700" y="860" width="15" height="15" class="box-light-orange"/>
+    <text x="725" y="872" class="label">External Operations</text>
+  </g>
+
+</svg>

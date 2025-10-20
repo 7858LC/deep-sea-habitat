@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.log
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.local
+venv/
+env/
+
+# Solidworks temporary files
+*.sldprt.bak
+*.sldasm.bak
+*.slddrw.bak
+
+# AutoCAD temporary files
+*.bak
+*.dwl
+*.dwl2
+
+# Office temporary files
+~$*.docx
+~$*.xlsx
+*.tmp
+
