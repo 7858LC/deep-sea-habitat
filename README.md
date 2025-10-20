@@ -1,10 +1,10 @@
-# Deep Sea Habitat - Systems Engineering Project
+# DSH - Systems Engineering Project
 
-A comprehensive systems engineering documentation and design project for a deep-sea habitat system capable of sustained operations at depths exceeding 6,000 meters.
+A comprehensive systems engineering documentation and design project for a DSH system capable of sustained operations at depths exceeding 6,000 meters.
 
 ## Project Overview
 
-This project contains complete technical documentation, system architecture diagrams, operational procedures, and design specifications for an integrated deep-sea habitat system. The habitat is designed to support 12-15 personnel for extended missions (30+ days) in extreme deep-sea environments.
+This project contains complete technical documentation, system architecture diagrams, operational procedures, and design specifications for an integrated DSH system. The habitat is designed to support 12-15 personnel for extended missions (30+ days) in extreme deep-sea environments.
 
 ## Project Structure
 
